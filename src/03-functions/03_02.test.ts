@@ -19,36 +19,36 @@ beforeEach(() => {
   }
 })
 
-test("Budget should be changed for hospital", () => {
+test('Budget should be changed for hospital', () => {
   changeBudget(city.governmentBuildings[0], 100000)
 
   expect(city.governmentBuildings[0].budget).toBe(300000)
 })
 
-test("Budget should be changed for fire station", () => {
+test('Budget should be changed for fire station', () => {
   changeBudget(city.governmentBuildings[1], -100000)
 
   expect(city.governmentBuildings[1].budget).toBe(400000)
 })
 
-test("House should be repaired", () => {
+test('House should be repaired', () => {
   repairHouse(city.houses[0])
 
   expect(city.houses[0].repaired).toBeTruthy()
 })
 
-test("Stuff should be increased", () => {
+test('Stuff should be increased', () => {
   hireStuff(city.governmentBuildings[0], 20)
 
   expect(city.governmentBuildings[0].staffCount).toBe(220)
 })
 
-test("Stuff should be fired", () => {
+test('Stuff should be fired', () => {
   fireStuff(city.governmentBuildings[0], 20)
 
   expect(city.governmentBuildings[0].staffCount).toBe(180)
 })
 
-test("Greeting to citizens should be correct", () => {
+test('Greeting to citizens should be correct', () => {
   expect(createMessage(city)).toBe(`Hello Nizhniy Novgorod citizens. I want you are happy. All 1249861 of you.`)
 })
